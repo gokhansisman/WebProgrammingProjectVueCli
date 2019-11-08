@@ -1,138 +1,3 @@
-<template>
-  <header class="enUstBaslik" style="z-index: 1;">
-    <div class="container">
-      <div class="row">
-        <div
-          class="baslik-genel"
-          style=" position: static !important;
-                height: auto !important;  font-weight: 400;
-                line-height: 1.1;"
-        >
-          <nav style="line-height: 1;">
-            <ul>
-              <li style="float: left;">
-                <a
-                  href="#musteri-hizmetleri"
-                  style="color: #7c7c7c;
-                            margin-right: 15px;"
-                >MÜŞTERİ HİZMETLERİ</a>
-              </li>
-              <li style="float: left;">
-                <a href="#siparis-takip" style="color: #D91E18;">
-                  <i class="fa fa-bars" style="color: #D91E18;"></i>
-                  <strong>
-                    &nbsp;SİPARİŞ
-                    TAKİBİ&nbsp;&nbsp;&nbsp;
-                  </strong>
-                </a>
-              </li>
-              <li style="float: left;">
-                <a
-                  href="#hakkimizda"
-                  style="color: #7c7c7c;
-                                margin-right: 15px;"
-                >Hakkımızda</a>
-              </li>
-              <li style="float: left;">
-                <a
-                  href="#iletisim"
-                  style="color: #7c7c7c;
-                                margin-right: 15px;"
-                >İletişim</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- sağ üst menü -->
-          <!--class = nav pull right ile sağa veya aşağıdaki şekilde olabilir.-->
-          <div style="position: absolute;right:10%">
-            <div>
-              <ul>
-                <li>
-                  Hoş geldin ziyaretçi
-                  <b>
-                    <a href="giris.html" style="color: #337ab7;">
-                      giriş
-                      yapın
-                    </a>
-                  </b>ya da
-                  <b>
-                    <a href="giris.html" style="color: #337ab7;">kayıt olun</a>
-                  </b>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="orta" style="margin-top: 15px;">
-          <div class="logo col-md-3" style=" margin-top: 30px;">
-            <a href="index.html" title="Okuoku.com">
-              <img src="../assets/logo.png" />
-            </a>
-          </div>
-
-          <div class="arama col-md-5">
-            <div>
-              <div
-                style="margin-left: 5px;
-                            font-size: 15px;
-                            color: #febf00;"
-              >
-                <b>50 TL Üzeri Kargo Bedava!</b>
-              </div>
-              <div
-                style="float: right;
-                             margin-left: 15px;
-                            font-size: 14px;
-                            color: #febf00;"
-              >
-                <b>Kapıda Nakit Ödeme</b>
-              </div>
-            </div>
-            <input type="search" placeholder="Ara..." />
-            <a class="send">
-              <i class="fa fa-search"></i>
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-5" style="text-align: right;">
-            <div style="float:left">
-              <a href="giris.html" class="sepet" style="margin-top: 40px;">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="girisYapYazisi">SEPETİM</span>
-                <p>Giriş yapmalısınız.</p>
-              </a>
-            </div>
-            <div>
-              <a
-                class="ozellik"
-                style=" height: 25px;
-                            color: #6f6d6e;
-                            font-family: verdana;
-                            font-weight: 300;
-                            margin-bottom: 5px !important;
-                            margin-top: 40px;
-                            text-decoration: none !important;
-                            padding-left: 3px;
-                            "
-                href="giris.html"
-              >
-                <i class="fa fa-user"></i>
-                <span class="girisYapYazisi">GİRİŞ YAP</span>
-                <p class="kayitol">KAYIT OL</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-</template>
-
-<script>
-export default {
-  
-}
-</script>
-<style scoped>
 .acilisEkrani{
         background-color: #fff;
         position: fixed;
@@ -151,7 +16,7 @@ export default {
     z-index: 1.0E+29;
 }
 #durum {
-    background-image: url(../assets/okuoku.gif);
+    background-image: url(resimler/okuoku.gif);
     background-position: center center;
     background-repeat: no-repeat;
     height: 100%;
@@ -166,7 +31,7 @@ export default {
 }
 
 .enUstFoto {
-   background-image: url(../assets/small-1041.jpg);
+   background-image: url(resimler/small-1041.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -178,7 +43,7 @@ export default {
 }
 
 .enUstFoto:hover {
-   background-image: url(../assets/1041.jpg);
+   background-image: url(resimler/1041.jpg);
    height: 200px;
 }
 .enUstFoto .fotoKapat {
@@ -338,7 +203,7 @@ export default {
           position: absolute;
           left: -21px;
           top: -21px;
-          background: url(../assets/menu-shadow.png) center center no-repeat;
+          background: url(./resimler/menu-shadow.png) center center no-repeat;
       }
       .enUstBaslik .orta .ozellik .fa, .enUstBaslik .orta .sepet .fa {
          -webkit-transition: color .3s;
@@ -515,7 +380,7 @@ export default {
    position: absolute;
    bottom: -3px;
    right: 0;
-   background: url(../assets/menu-stripe.png) center bottom no-repeat;
+   background: url(./resimler/menu-stripe.png) center bottom no-repeat;
 }
 li, ul {
     list-style: none;
@@ -551,7 +416,7 @@ float: left;
 }
 
     .oyYildiz .oy-Sembol a {
-        background: url(../assets/star.png);
+        background: url(./resimler/star.png);
         width: 24px;
         height: 24px;
         display: block;
@@ -808,7 +673,7 @@ float: left;
 
     .kitapUstGorunum:after {
         position: absolute;
-        background: url(../assets/kitap-bg2.png) left top no-repeat;
+        background: url(./resimler/kitap-bg2.png) left top no-repeat;
         content: "";
         top: 0;
         height: 100%;
@@ -957,7 +822,7 @@ float: left;
 }
 
 .cakSatanlarBolum .bolumBasligi {
-    background: url(../assets/separator.png) right center no-repeat;
+    background: url(./resimler/separator.png) right center no-repeat;
 }
 
 	.cakSatanlarBolum .bolumBasligi span {
@@ -976,7 +841,7 @@ float: left;
 .cakSatanlarBolum .bracket {
     width: 40px;
     height: 43px;
-    background: url(../assets/strip.png) center center no-repeat;
+    background: url(./strip.png) center center no-repeat;
     color: #fff;
     font-weight: 700;
     font-size: 23px;
@@ -1035,7 +900,7 @@ float: left;
 
 .ilhamBolum .ayirici, .ayirici2, .cikintiBlogu .ayirici {
     height: 19px;
-    background: url(../assets/separator.png) center center repeat-x;
+    background: url(./resimler/separator.png) center center repeat-x;
 }
 
 .ilhamBolum .permalink .u-url, .cikintiBlogu .permalink .u-url {
@@ -1072,7 +937,7 @@ float: left;
 
     .resimWrap:after {
         position: absolute;
-        background: url(../assets/kitap-bg.png) left top no-repeat;
+        background: url(./resimler/kitap-bg.png) left top no-repeat;
         visibility: hidden;
     }
 
@@ -1088,7 +953,7 @@ float: left;
 
     .resimWrap2:after {
         position: absolute;
-        background: url(../assets/kitap-bg2.png) left top no-repeat;
+        background: url(./resimler/kitap-bg2.png) left top no-repeat;
     }
 
 
@@ -1100,7 +965,7 @@ float: left;
     text-align: center;
 }
 
-.ilhamBolum .urunBlogu .urunİci, .cikintiBlogu .urunBlogu .urunİci {
+	    .ilhamBolum .urunBlogu .urunİci, .cikintiBlogu .urunBlogu .urunİci {
         border-radius: 7px;
         background-color: #fff;
         padding-top: 30px;
@@ -1247,4 +1112,3 @@ float: left;
     transition: all .3s;
     font-weight: 700;
  }
-</style>

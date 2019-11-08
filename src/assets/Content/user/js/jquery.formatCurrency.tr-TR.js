@@ -1,0 +1,1 @@
+﻿!function(a){a.formatCurrency.regions["tr-TR"]={symbol:"TL",positiveFormat:"%n %s",negativeFormat:"-%n %s",decimalSymbol:",",digitGroupSymbol:".",groupDigits:!0}}(jQuery);

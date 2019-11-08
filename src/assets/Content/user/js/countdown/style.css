@@ -1,0 +1,57 @@
+﻿.countdown {
+    color: #333;
+    margin-top:10px
+}
+.countdown .countdown-section {
+    display: block;
+    float: left;
+    border:1px #dcdcdc solid;
+    border-radius:4px
+}
+.countdown .countdown-row {
+    overflow: hidden;
+}
+.countdown:not(.simple) {
+    text-align: center;
+}
+.countdown:not(.simple) .countdown-row {
+    display: inline-block;
+}
+.countdown:not(.simple) .countdown-section:not(:last-child) {
+    margin-right: 2px;
+}
+.countdown:not(.simple) .countdown-section {
+    width: 35px;
+}
+.countdown:not(.simple) .countdown-amount {
+    /*background: #f8f8f8 none repeat scroll 0 0;*/
+    border-radius: 3px 3px 0 0;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 1px;
+    padding: 1px 0;
+    font-size:22px
+}
+.countdown:not(.simple) .countdown-period {
+    /*background: #f8f8f8 none repeat scroll 0 0;*/
+    border-radius: 0 0 3px 3px;
+    display: block;
+    font-size: 10px;
+    line-height: 16px;
+}
+.countdown.simple {
+    display: inline-block;
+    font-size: 13px;
+}
+.countdown.simple .countdown-row {
+    display: block;
+}
+.countdown.simple .countdown-amount {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 2px;
+}
+.countdown.simple .countdown-section:not(:last-child) {
+    margin-right: 8px;
+}

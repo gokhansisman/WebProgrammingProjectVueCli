@@ -1,19 +1,36 @@
 <template>
+<!DOCTYPE html>
+<html>
+
+    <meta charset="utf-8" />
+    <title>
+        Online kitap alışveriş siteniz
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="..assets/css/bootstrap3860.css?v=1" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../assets/index.css" rel="stylesheet" />
+    <link href="../assets/Content/user/css/font-awesome.css" rel="stylesheet" />
   <div id="app">
-    <Header/>
     <AcilisEkrani />
+    <Banner/>
+    <Header/>
   </div>
+</html>
 </template>
 
 <script>
-import Header from './components/header.vue'
+
+import Banner from './components/banner.vue'
 import AcilisEkrani from './components/acilisEkrani.vue'
+import Header from './components/header'
 
 export default {
   name: 'app',
   components: {
-        Header,
-        AcilisEkrani
+        Banner,
+        AcilisEkrani,
+        Header
 
   }
 }
