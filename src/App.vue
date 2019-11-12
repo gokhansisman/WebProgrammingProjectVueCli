@@ -1,38 +1,19 @@
 <template>
   <div id="app">
-    <AcilisEkrani />
-    <Banner/>
-    <Header/>
-    <Product/>
+    <MainPage/>
   </div>
 </template>
 
 <script>
-
-import Banner from './components/banner.vue'
-import AcilisEkrani from './components/acilisEkrani.vue'
-import Header from './components/header'
-import Product from './components/product'
+import MainPage from './components/MainPage.vue'
 
 export default {
   name: 'app',
   components: {
-        Banner,
-        AcilisEkrani,
-        Header,
-        Product
-
+    MainPage
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 10px;
-}
 </style>

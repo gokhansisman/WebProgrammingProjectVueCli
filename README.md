@@ -1,4 +1,4 @@
-# Web ProgrammingProject with VueCli
+# okuoku
 
 ## Project setup
 ```
