@@ -14,9 +14,9 @@
         <div class="kapsul">
           <div id="sütun1" class="sütun1" style="width: 30%">
             <div class="w3-content w3-display-container" style="max-width:800px;">
-              <img class="mySlides" src style="width: 100%; display: block;" />
-              <img class="mySlides" src="r2.jpg" style="width: 100%; display: none;" />
-              <img class="mySlides" src="r4.jpg" style="width: 100%; display: none;" />
+              <img class="mySlides" src="resimler/r2.jpg" style="width: 100%; display: block;" />
+              <img class="mySlides" src="resimler/r1.jpg" style="width: 100%; display: none;" />
+              <img class="mySlides" src="resimler/r4.jpg" style="width: 100%; display: none;" />
               <div
                 class="oklar w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
                 style="width:100%"
@@ -32,10 +32,10 @@
           <div class="sütun2" style="width: 70%;">
             <div class="w3-content w3-display-container" style="max-width:800px">
               <img class="mySlides2" src="resimler/1242.jpg" style="width: 100%; display: block;" />
-              <img class="mySlides2" src="r2.jpg" style="width: 100%; display: none;" />
-              <img class="mySlides2" src="r4.jpg" style="width: 100%; display: none;" />
+              <img class="mySlides2" src="resimler/r2.jpg" style="width: 100%; display: none;" />
+              <img class="mySlides2" src="resimler/r4.jpg" style="width: 100%; display: none;" />
               <img class="mySlides2" src="resimler/1148.jpg" style="width: 100%; display: none;" />
-              <img class="mySlides2" src="r1.jpg" style="width: 100%; display: none;" />
+              <img class="mySlides2" src="resimler/r1.jpg" style="width: 100%; display: none;" />
 
               <div
                 class="oklar w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
