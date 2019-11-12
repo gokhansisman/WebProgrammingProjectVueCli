@@ -1,4 +1,4 @@
-# startinvue
+# Web ProgrammingProject with VueCli
 
 ## Project setup
 ```
