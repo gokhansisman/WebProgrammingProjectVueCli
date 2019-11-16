@@ -8,7 +8,7 @@
 </template>
 
 <script>
-        setTimeout(function () { document.getElementById('silinecek').remove(); }, 3000);
+    setTimeout(function () { document.getElementById('silinecek').remove(); }, 3000);
     export default {
   name: "FirstScreen"
 };

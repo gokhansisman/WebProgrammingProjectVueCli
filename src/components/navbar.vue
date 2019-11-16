@@ -25,14 +25,14 @@
 
                 <a href="#yeni-cikanlar" class="dropdown-child" style="color:goldenrod">Kitaplar</a>
                 <a
-                  href="kampanyalar.html"
+                  href="/#/KampanyalarPage"
                   class="dropdown-child"
                   style="color:goldenrod"
                 >Kampanyalar</a>
               </li>
 
               <li class="dropdown">
-                <a href="#yayinevi/listele">Yayınevleri</a>
+                <a href="/#/YayinEvleri">Yayınevleri</a>
                 <a href="#yayinevi/listele" class="dropdown-child" style="color:goldenrod">Acedemia</a>
                 <a
                   href="#yayinevi/listele"
@@ -50,7 +50,7 @@
                 <a href="#yayinevi/listele" class="dropdown-child" style="color:goldenrod">Edebiyat</a>
               </li>
               <li style=" text-transform: uppercase;" class="dropdown">
-                <a href="kampanyalar.html" style="color: #5cb85c;">
+                <a href="/#/KampanyalarPage" style="color: #5cb85c;">
                   <i class="fa fa-gift" style="color: #5cb85c;"></i>
                   <strong>&nbsp;KAMPANYALAR</strong>
                 </a>
