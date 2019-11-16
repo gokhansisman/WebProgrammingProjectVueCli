@@ -3,7 +3,7 @@
     <!--footerın Üstü-->
     <div style="margin-top: 20px;
                             background-color: #ececec;
-                            width: 1400px;
+                            width: 1520px;
                             padding-top: 40px;
                             padding-bottom: 40px;">
         <footer class="bilgi-altbilgi">

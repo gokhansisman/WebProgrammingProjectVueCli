@@ -3,7 +3,7 @@
     <FirstScreen/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
-      <Header />
+      <Header/>
 
     </div>
 

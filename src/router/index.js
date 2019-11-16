@@ -5,6 +5,7 @@ import MainPage from '@/components/MainPage'
 import YayinEvleriPage from '@/components/YayinEvleriPage'
 import ProductDetailPage from '@/components/ProductDetailPage'
 import KampanyalarPage from '@/components/KampanyalarPage'
+import IletisimPage from '@/components/IletisimPage'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
             path: '/KampanyalarPage',
             name: 'KampanyalarPage',
             component: KampanyalarPage
+        },
+        {
+            path: '/IletisimPage',
+            name: 'IletisimPage',
+            component: IletisimPage
         }
     ]
 })
