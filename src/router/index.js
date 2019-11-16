@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import MainPage from '@/components/MainPage'
-import Header from '@/components/Header'
+//import Header from '@/components/Header'
 import YayinEvleriPage from '@/components/YayinEvleriPage'
+import ProductDetailPage from '@/components/ProductDetailPage'
 Vue.use(Router)
 
 export default new Router({
@@ -13,9 +14,9 @@ export default new Router({
             component:MainPage
         },
         {
-            path:'/ProductPage',
-            name:'ProductPage',
-            component:Header
+            path:'/ProductDetailPage',
+            name:'ProductDetailPage',
+            component:ProductDetailPage
         },{
         path:'/YayinEvleri',
         name:'YayinEvleri',
