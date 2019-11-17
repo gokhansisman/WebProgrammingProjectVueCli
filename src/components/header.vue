@@ -35,7 +35,7 @@
               </li>
               <li style="float: left;">
                 <a
-                  href="#iletisim"
+                  href="/#/IletisimPage"
                   style="color: #7c7c7c;
                                 margin-right: 15px;"
                 >İletişim</a>

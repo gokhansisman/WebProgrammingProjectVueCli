@@ -6,7 +6,10 @@ import YayinEvleriPage from '@/components/YayinEvleriPage'
 import ProductDetailPage from '@/components/ProductDetailPage'
 import KampanyalarPage from '@/components/KampanyalarPage'
 import IletisimPage from '@/components/IletisimPage'
+
 import Deneme from '@/components/Deneme'
+import CocukPage from '@/components/CocukPage'
+
 Vue.use(Router)
 
 export default new Router({
@@ -37,9 +40,18 @@ export default new Router({
             component: IletisimPage
         },
         {
+
             path: '/Deneme',
             name: 'Deneme',
             component: Deneme
+        }
+        ,
+        {
+
+            path: '/CocukPage',
+            name: 'CocukPage',
+            component: CocukPage
+
         }
     ]
 })
