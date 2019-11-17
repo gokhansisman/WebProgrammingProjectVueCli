@@ -1,5 +1,6 @@
 <template>
     <div>
+        <VueLoading/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
       <Header />
@@ -120,17 +121,21 @@ import Header from "./Header"
 import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
 import FooterPage from "./FooterPage"
+import VueLoading from "./VueLoading"
 export default {
   name: "YayinEvleriPage",
   components: {
     Header,
     Navbar,
     TopBanner,
-    FooterPage
+    FooterPage,
+    VueLoading
   },methods:{
       tiklandi(){
           alert("Tiklandi");
       }
+  },created() {
+      document.title = "Yayın Evleri | Okuoku.com";
   }
 };
 </script>

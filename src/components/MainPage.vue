@@ -1145,6 +1145,8 @@ export default {
     TopBanner,
     FirstScreen,
     FooterPage
+  },created() {
+      document.title = "Online kitap alışveriş siteniz | Okuoku.com";
   }
 };
 </script>

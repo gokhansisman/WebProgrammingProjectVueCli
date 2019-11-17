@@ -1,5 +1,6 @@
 <template>
     <div>
+        <VueLoading/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
       <Header/>
@@ -714,6 +715,7 @@ import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
 import FooterPage from "./FooterPage"
 import TabUnderProduct from "./TabUnderProduct"
+import VueLoading from "./VueLoading"
 export default {
   name: "ProductDetailPage",
   components: {
@@ -721,7 +723,8 @@ export default {
     Navbar,
     TopBanner,
     FooterPage,
-    TabUnderProduct
+    TabUnderProduct,
+    VueLoading
   },
   data(){
     return {
@@ -745,6 +748,8 @@ export default {
       this.tiklandiMi =true
       localStorage.setItem('Urun Sayisi',this.counter)
     }
+  },created() {
+      document.title = "Issız Kadınlar Sokağı | Okuoku.com";
   }
   
 };

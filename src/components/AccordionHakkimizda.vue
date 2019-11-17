@@ -1,6 +1,6 @@
 <template>
   <div>
-     
+     <VueLoading/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
       <Header />
@@ -29,14 +29,15 @@ import Header from "./Header"
 import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
 import FooterPage from "./FooterPage"
-
+import VueLoading from "./VueLoading"
 export default {
   name: "AccordionHakkimizda",
   components: {
     Header,
     Navbar,
     TopBanner,
-    FooterPage
+    FooterPage,
+    VueLoading
   },
   data() {
     return {
@@ -83,6 +84,8 @@ export default {
         }
       ]
     };
+  },created() {
+      document.title = "Hakkımızda | Okuoku.com";
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="clearfix">
     <!--footerın Üstü-->
-    <div class="fa fa-times" @click="toggle()">Footer Aç/Kapat</div>
+    <div class="fa fa-plus-square-o" @click="toggle()">Footer Aç/Kapat</div>
     <div style="margin-top: 20px;
                             background-color: #ececec;
                             width: 1520px;

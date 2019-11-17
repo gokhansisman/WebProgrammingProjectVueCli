@@ -63,7 +63,15 @@ export default new Router({
             name: 'LoginPage',
             component: lazyLoad('LoginPage')
 
+        },
+        {
+
+            path: '/VueLoading',
+            name: 'VueLoading',
+            component: lazyLoad('VueLoading')
+
         }
+        
        
         
     ]
