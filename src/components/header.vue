@@ -12,7 +12,7 @@
             <ul>
               <li style="float: left;">
                 <a
-                  href="#musteri-hizmetleri"
+                  href="/#/AccordionHakkimizda"
                   style="color: #7c7c7c;
                             margin-right: 15px;"
                 >MÜŞTERİ HİZMETLERİ</a>
@@ -28,7 +28,7 @@
               </li>
               <li style="float: left;">
                 <a
-                  href="#hakkimizda"
+                  href="/#/AccordionHakkimizda"
                   style="color: #7c7c7c;
                                 margin-right: 15px;"
                 >Hakkımızda</a>
@@ -50,13 +50,13 @@
                 <li>
                   Hoş geldin ziyaretçi
                   <b>
-                    <a href="giris.html" style="color: #337ab7;">
+                    <a href="/#/LoginPage" style="color: #337ab7;">
                       giriş
                       yapın
                     </a>
                   </b>ya da
                   <b>
-                    <a href="giris.html" style="color: #337ab7;">kayıt olun</a>
+                    <a href="/#/LoginPage" style="color: #337ab7;">kayıt olun</a>
                   </b>
                 </li>
               </ul>
@@ -65,7 +65,7 @@
         </div>
         <div class="orta" style="margin-top: 15px;">
           <div class="logo col-md-3" style=" margin-top: 30px;">
-            <a href="index.html" title="Okuoku.com">
+            <a href="/" title="Okuoku.com">
               <img src="resimler/logo.png" />
             </a>
           </div>
@@ -95,7 +95,7 @@
           </div>
           <div class="col-md-4 col-sm-5" style="text-align: right;">
             <div style="float:left">
-              <a href="giris.html" class="sepet" style="margin-top: 40px;">
+              <a href="/#/LoginPage" class="sepet" style="margin-top: 40px;">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="girisYapYazisi">SEPETİM</span>
                 <p>Giriş yapmalısınız.</p>
@@ -113,7 +113,7 @@
                             text-decoration: none !important;
                             padding-left: 3px;
                             "
-                href="giris.html"
+                href="/#/LoginPage"
               >
                 <i class="fa fa-user"></i>
                 <span class="girisYapYazisi">GİRİŞ YAP</span>
