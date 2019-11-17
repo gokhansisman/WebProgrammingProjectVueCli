@@ -1,11 +1,12 @@
 <template>
     <div class="clearfix">
     <!--footerın Üstü-->
+    <div class="fa fa-times" @click="toggle()">Footer Aç/Kapat</div>
     <div style="margin-top: 20px;
                             background-color: #ececec;
                             width: 1520px;
                             padding-top: 40px;
-                            padding-bottom: 40px;">
+                            padding-bottom: 40px;" v-if="visible">
         <footer class="bilgi-altbilgi">
             <div class="container">
             </div>
@@ -44,15 +45,27 @@
                     </ul>
                 </div>
             </div>
+            
         </footer>
            </div>
-    </div>
+            </div>
+   
 </template>
 
 
 <script>
 export default {
-  name: "FooterPage"
+  name: "FooterPage",
+   data () {
+    return {
+      visible:true
+    }
+  },methods:{
+      toggle(){
+          this.visible=!this.visible
+      }
+      
+  }
 };
 </script>
 
