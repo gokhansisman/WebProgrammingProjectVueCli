@@ -78,7 +78,14 @@ export default new Router({
             component: lazyLoad('YeniCikanlarPage')
 
         },
+        {
 
+            path: '/Book',
+            name: 'Book',
+            component: lazyLoad('Book')
+
+        },
+        
 
 
     ]

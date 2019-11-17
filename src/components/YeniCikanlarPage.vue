@@ -802,7 +802,11 @@
                     ></v-pagination>
                   </div>
                 </div>
-                <div class="clearfix"></div>
+                <div class="clearfix"></div>         
+                <Book v-if="currentPage===1"/>
+                <Book2 v-if="currentPage===2"/>
+                <Book3 v-if="currentPage===3"/>
+                <Book30 v-if="currentPage===30"/>
               </div>
             </div>
           </div>
@@ -822,6 +826,11 @@ import Navbar from "./Navbar";
 import TopBanner from "./TopBanner";
 import FooterPage from "./FooterPage";
 import VueLoading from "./VueLoading";
+import Book from "./Book";
+import Book2 from "./Book2";
+import Book3 from "./Book3";
+import Book30 from "./Book30";
+
 export default {
   name: "YeniCikanlarPage",
   components: {
@@ -830,7 +839,11 @@ export default {
     TopBanner,
     FooterPage,
     VueLoading,
-    vPagination
+    vPagination,
+    Book,
+    Book2,
+    Book3,
+    Book30
   },
   data() {
     return {

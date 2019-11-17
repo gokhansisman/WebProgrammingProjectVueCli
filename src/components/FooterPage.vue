@@ -1,7 +1,9 @@
 <template>
     <div class="clearfix">
     <!--footerın Üstü-->
-    <div class="fa fa-plus-square-o" @click="toggle()">Footer Aç/Kapat</div>
+    <div class="fa fa-plus-square-o" @click="toggle()" style="float: right;
+    font-size: 16px;
+    color: orange;">Footer Aç/Kapat</div>
     <div style="margin-top: 20px;
                             background-color: #ececec;
                             width: 1520px;
