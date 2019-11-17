@@ -1,6 +1,5 @@
 <template>
     <div>
-    <FirstScreen/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
       <Header/>
@@ -713,7 +712,6 @@
 import Header from "./Header"
 import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
-import FirstScreen from "./FirstScreen"
 import FooterPage from "./FooterPage"
 import TabUnderProduct from "./TabUnderProduct"
 export default {
@@ -722,7 +720,6 @@ export default {
     Header,
     Navbar,
     TopBanner,
-    FirstScreen,
     FooterPage,
     TabUnderProduct
   },

@@ -86,7 +86,7 @@
         </div>
       </modal>
     </div>
-          <div class="arama col-md-5" @click="show()">
+          <div class="arama col-md-5">
             <div>
               <div
                 style="margin-left: 5px;
@@ -104,7 +104,7 @@
                 <b>Kapıda Nakit Ödeme</b>
               </div>
             </div>
-            <input type="search" placeholder="Ara..." />
+            <input type="search" placeholder="Ara..." @click="show()"/>
             <a class="send">
               <i class="fa fa-search"></i>
             </a>

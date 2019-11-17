@@ -1,6 +1,5 @@
 <template>
    <div>
-       <FirstScreen/>
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
       <Header />
@@ -8,7 +7,6 @@
     </div>
 
     <Navbar />
-    <modalDeneme/>
         <div class="container container-wrap">
             <div class="row">
                 <div class="col-md-12">
@@ -82,18 +80,14 @@
 import Header from "./Header"
 import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
-import FirstScreen from "./FirstScreen"
 import FooterPage from "./FooterPage"
-import ModalDeneme from "./ModalDeneme"
 export default {
   name: "KampanyalarPage",
   components: {
     Header,
     Navbar,
     TopBanner,
-    FirstScreen,
-    FooterPage,
-    ModalDeneme
+    FooterPage
   }
 };
 </script>
