@@ -9,6 +9,7 @@ import IletisimPage from '@/components/IletisimPage'
 import CocukPage from '@/components/CocukPage'
 import AccordionHakkimizda from '@/components/AccordionHakkimizda'
 import LoginPage from '@/components/LoginPage'
+import VModalSearch from '@/components/VModalSearch'
 Vue.use(Router)
 
 export default new Router({
@@ -58,6 +59,12 @@ export default new Router({
             name: 'LoginPage',
             component: LoginPage
 
+        },
+        {
+            path: '/VModalSearch',
+            name: 'VModalSearch',
+            component: VModalSearch
+            
         }
        
         

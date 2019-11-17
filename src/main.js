@@ -7,9 +7,9 @@ import { AccordionMenu } from 'vue-accordion-menu'
 Vue.component('AccordionMenu', AccordionMenu)
 Vue.config.productionTip = false
 
-
-Vue.use(VModal, { dynamic: true, injectModalsContainer: true })
+Vue.use(VModal)
 
 new Vue({
   render: h => h(App),router,VModal
 }).$mount('#app')
+

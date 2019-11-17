@@ -69,8 +69,24 @@
               <img src="resimler/logo.png" />
             </a>
           </div>
-
-          <div class="arama col-md-5">
+          <div>
+      <modal name="hello-world" :width="1330" :height="150" :pivotY="0.1">
+        <div class="orta" style="margin-top: 15px;">
+          <div class="logo col-md-3" style=" margin-top: 30px;">
+            <a href="/" title="Okuoku.com">
+              <img src="resimler/logo.png" />
+            </a>
+          </div>
+        </div>
+        <div class="arama col-md-5" style="width: 100%;margin-top: 4px;">
+          <input type="search" placeholder="Ara..." />
+          <a class="send" style="float:right;margin-top:-2px">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+      </modal>
+    </div>
+          <div class="arama col-md-5" @click="show()">
             <div>
               <div
                 style="margin-left: 5px;
@@ -129,7 +145,18 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  components:{
+    
+  },
+  methods: {
+    show() {
+      this.$modal.show("hello-world");
+    },
+    hide() {
+      this.$modal.hide("hello-world");
+    }
+  }
 };
 </script>
 
