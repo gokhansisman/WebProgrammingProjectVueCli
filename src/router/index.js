@@ -12,9 +12,9 @@ import Router from 'vue-router'
 //import VModalSearch from '@/components/VModalSearch'
 Vue.use(Router)
 
-function lazyLoad(view){
-    return() => import(`@/components/${view}.vue`)
-  }
+function lazyLoad(view) {
+    return () => import(`@/components/${view}.vue`)
+}
 
 export default new Router({
     routes: [
@@ -70,9 +70,16 @@ export default new Router({
             name: 'VueLoading',
             component: lazyLoad('VueLoading')
 
-        }
-        
-       
-        
+        },
+        {
+
+            path: '/YeniCikanlarPage',
+            name: 'YeniCikanlarPage',
+            component: lazyLoad('YeniCikanlarPage')
+
+        },
+
+
+
     ]
 })
