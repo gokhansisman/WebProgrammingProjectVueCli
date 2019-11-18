@@ -13,12 +13,12 @@
           <div>
             <ul class="nav navbar-nav">
               <li>
-                <a href="index.html" title="Okuoku.com">
+                <a href="/" title="Okuoku.com">
                   <i class="fa fa-home"></i>
                 </a>
               </li>
               <li class="dropdown">
-                <a href="yeni-cikanlar.html">
+                <a href="/#/YeniCikanlarPage">
                   Yeni
                   Çıkanlar
                 </a>

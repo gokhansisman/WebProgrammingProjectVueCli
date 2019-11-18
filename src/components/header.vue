@@ -111,7 +111,7 @@
           </div>
           <div class="col-md-4 col-sm-5" style="text-align: right;">
             <div style="float:left">
-              <a href="/#/LoginPage" class="sepet" style="margin-top: 40px;">
+              <a href="/#/PurchasePage" class="sepet" style="margin-top: 40px;">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="girisYapYazisi">SEPETİM</span>
                 <p>Giriş yapmalısınız.</p>

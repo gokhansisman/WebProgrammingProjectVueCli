@@ -34,6 +34,7 @@
                               title
                               data-original-title="Tüm Sepeti Sil"
                               class="hoverTooltip"
+                              @click="deleteBasket()"
                               style="cursor: pointer; font-size: 25px;"
                             >
                               <i class="fa fa-times"></i>
@@ -218,9 +219,9 @@ export default {
   },
   methods:{
     deleteBasket(){
-if(localStorage.getItem('Urun Sayisi') == 0) {
+  localStorage.setItem('Urun Sayisi',0)
   this.visible=false;
-  }
+
     },
     getProductInfo(){
       this.count = localStorage.getItem('Urun Sayisi')

@@ -78,7 +78,7 @@
                   </div>
                   <div class="col-xs-6 mobsag">
                     <a itemprop="url" href="/urun/listele/yayinevi/dogan-kitap/9118">
-                      <p class="p-name" itemprop="name">kitapYayinEvi}}</p>
+                      <p class="p-name" itemprop="name">Doğan Kitap</p>
                     </a>
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                   <div class="col-xs-6 mobsag">
                     <a itemprop="url" href="/urun/listele/yazar/1/canan-tan/80240">
                       <p class="p-name" itemprop="name">
-                        <strong style="font-weight: 700;">kitapYazar}}</strong>
+                        <strong style="font-weight: 700;">Canan Tan</strong>
                       </p>
                     </a>
                   </div>
