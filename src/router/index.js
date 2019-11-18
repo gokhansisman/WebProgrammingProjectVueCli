@@ -80,9 +80,16 @@ export default new Router({
         },
         {
 
-            path: '/Book',
-            name: 'Book',
-            component: lazyLoad('Book')
+            path: '/Stepper',
+            name: 'Stepper',
+            component: lazyLoad('Stepper')
+
+        },
+        {
+
+            path: '/PurchasePage',
+            name: 'PurchasePage',
+            component: lazyLoad('PurchasePage')
 
         },
         

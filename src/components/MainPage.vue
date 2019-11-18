@@ -1137,6 +1137,7 @@ import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
 import FirstScreen from "./FirstScreen"
 import FooterPage from "./FooterPage"
+//import TabMainPage from "./TabMainPage"
 export default {
   name: "MainPage",
   components: {
@@ -1145,6 +1146,7 @@ export default {
     TopBanner,
     FirstScreen,
     FooterPage
+    
   },created() {
       document.title = "Online kitap alışveriş siteniz | Okuoku.com";
   }
@@ -1153,4 +1155,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>
