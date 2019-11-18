@@ -27,7 +27,7 @@
                                           width="145"
                                           class="mx"
                                           alt="issiz-kadinlar"
-                                          src="resimler/middle-issiz-kadinlar-sokagi.jpg"
+                                          src="resimler/middle-her-sey-seninle-baslar.jpg"
                                         />
                                       </span>
                                     </div>
@@ -44,19 +44,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{kitapAdi}}</h5>
+                                  >{{kitapAdi1}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{kitapYazar}}</span>
+                                      <span>{{kitapYazar1}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{kitapYayinEvi}}</span>
+                                      <span>{{kitapYayinEvi1}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -135,7 +135,7 @@
                                           width="145"
                                           class="mx"
                                           alt="issiz-kadinlar"
-                                          src="resimler/middle-issiz-kadinlar-sokagi.jpg"
+                                          src="resimler/middle-aklimda-hep-sen.jpg"
                                         />
                                       </span>
                                     </div>
@@ -152,19 +152,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{kitapAdi}}</h5>
+                                  >{{kitapAdi2}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{kitapYazar}}</span>
+                                      <span>{{kitapYazar2}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{kitapYayinEvi}}</span>
+                                      <span>{{kitapYayinEvi2}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -217,12 +217,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{kitapYuzde}}
+                                  %{{kitapYuzde2}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat">{{kitapFiyat}}</span>
-                                  <span class="yeniFiyat">{{kitapIndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat">{{kitapFiyat2}}</span>
+                                  <span class="yeniFiyat">{{kitapIndirimliFiyat2}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -243,7 +243,7 @@
                                           width="145"
                                           class="mx"
                                           alt="issiz-kadinlar"
-                                          src="resimler/middle-issiz-kadinlar-sokagi.jpg"
+                                          src="resimler/middle-siradan-bir-gun.jpg"
                                         />
                                       </span>
                                     </div>
@@ -260,19 +260,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{kitapAdi}}</h5>
+                                  >{{kitapAdi3}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{kitapYazar}}</span>
+                                      <span>{{kitapYazar3}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{kitapYayinEvi}}</span>
+                                      <span>{{kitapYayinEvi3}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -325,12 +325,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{kitapYuzde}}
+                                  %{{kitapYuzde3}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat">{{kitapFiyat}}</span>
-                                  <span class="yeniFiyat">{{kitapIndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat">{{kitapFiyat3}}</span>
+                                  <span class="yeniFiyat">{{kitapIndirimliFiyat3}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -351,7 +351,7 @@
                                           width="145"
                                           class="mx"
                                           alt="issiz-kadinlar"
-                                          src="resimler/middle-issiz-kadinlar-sokagi.jpg"
+                                          src="resimler/middle-platon-bir-gun-karikatur-cizer.jpg"
                                         />
                                       </span>
                                     </div>
@@ -368,19 +368,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{kitapAdi}}</h5>
+                                  >{{kitapAdi4}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{kitapYazar}}</span>
+                                      <span>{{kitapYazar4}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{kitapYayinEvi}}</span>
+                                      <span>{{kitapYayinEvi4}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -433,12 +433,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{kitapYuzde}}
+                                  %{{kitapYuzde4}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat" style="top:-10px">{{kitapFiyat}}</span>
-                                  <span class="yeniFiyat">{{kitapIndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat" style="top:-10px">{{kitapFiyat4}}</span>
+                                  <span class="yeniFiyat">{{kitapIndirimliFiyat4}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -464,13 +464,38 @@ export default {
   components: {},
   data() {
     return {
-      kitapAdi: "Issız Kadınlar Sokağı",
-      kitapYazar: "Canan Tan",
-      kitapYayinEvi: "Doğan Kitap",
-      kitapYuzde: "28",
-      kitapFiyat: "27,00",
-      kitapIndirimliFiyat: "19,44",
-      kitapEditor: "Nejla Feroğlu"
+      kitapAdi1: "Her Şey Seninle Başlar",
+      kitapYazar1: "Mümin Sekman",
+      kitapYayinEvi1: "Alfa Yayınları",
+      kitapYuzde1: "35",
+      kitapFiyat1: "20,00",
+      kitapIndirimliFiyat1: "13,00",
+      kitapEditor1: "Nejla Feroğlu",
+
+      kitapAdi2: "Aklımda Hep Sen",
+      kitapYazar2: "Kürşat Başar",
+      kitapYayinEvi2: "Everest Yayınları",
+      kitapYuzde2: "35",
+      kitapFiyat2: "29,00",
+      kitapIndirimliFiyat2: "18,85",
+      kitapEditor2: "Nejla Feroğlu",
+
+      kitapAdi3: "Sıradan Bir Gün",
+      kitapYazar3: "Yekta Kopan",
+      kitapYayin3Evi: "Can Yayınları",
+      kitapYuzde3: "30",
+      kitapFiyat3: "24,50",
+      kitapIndirimliFiyat3: "17,15",
+      kitap3Editor: "Nejla Feroğlu",
+
+      kitapAdi4: "Platon Bir Gün Bir Karikatür Çizer",
+      kitapYazar4: "Thomas Cathcart , Daniel Klein",
+      kitapYayinEvi4: "Aylak Kitap",
+      kitapYuzde4: "20",
+      kitapFiyat4: "29,50",
+      kitapIndirimliFiyat4: "23,60",
+      kitapEditor4: "Nejla Feroğlu",
+
     };
   },
   methods: {}
@@ -481,4 +506,5 @@ export default {
 .margin-ver {
   margin-top: -10px;
 }
+
 </style>

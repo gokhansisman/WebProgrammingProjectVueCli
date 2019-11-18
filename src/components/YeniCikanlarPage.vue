@@ -802,11 +802,13 @@
                     ></v-pagination>
                   </div>
                 </div>
-                <div class="clearfix"></div>         
-                <Book v-if="currentPage===1"/>
+                <div class="clearfix"></div>       
+                <div v-bind:class="[ shape === true ? 'oneByone' : 'fourGroups' ]" @click="changeShape()"> 
+                <Book v-if="currentPage===1" />
                 <Book2 v-if="currentPage===2"/>
                 <Book3 v-if="currentPage===3"/>
                 <Book30 v-if="currentPage===30"/>
+                </div>
               </div>
             </div>
           </div>
@@ -853,6 +855,7 @@ export default {
       activeYazar: false,
       activeKategori: false,
       activeFiyat: false,
+      shape:true,
       bootstrapPaginationClasses: {
         ul: "pagination",
         li: "page-item",
@@ -868,7 +871,11 @@ export default {
       }
     };
   },
-  methods: {},
+  methods: {
+    changeShape(){
+      this.shape=!this.shape
+    }
+  },
   created() {
     document.title = "Yeni Çıkanlar | Okuoku.com";
   }
@@ -876,3 +883,10 @@ export default {
 </script>
 
 <style scoped>
+.oneByone {
+  -webkit-appearance: searchfield-cancel-button;
+}
+.fourGroups {
+
+}
+</style>
