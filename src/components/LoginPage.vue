@@ -96,6 +96,7 @@
                 <label class="col-sm-3 control-label">Ad</label>
                 <div class="col-sm-9">
                   <input
+                  v-model="musteri.isim"
                     type="text"
                     maxlength="50"
                     class="firsCapitalUpper form-control"
@@ -111,6 +112,7 @@
                 <label class="col-sm-3 control-label">Soyad</label>
                 <div class="col-sm-9">
                   <input
+                  v-model="musteri.soyad"
                     type="text"
                     maxlength="50"
                     class="firsCapitalUpper form-control"
@@ -126,7 +128,7 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label">Eposta</label>
                 <div class="col-sm-9">
-                  <input type="text" maxlength="100" class="form-control" autocomplete="off" />
+                  <input v-model="musteri.email" type="text" maxlength="100" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Eposta formatı
                     uygun değil.
@@ -141,7 +143,7 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label">Şifre</label>
                 <div class="col-sm-9">
-                  <input type="password" maxlength="20" class="form-control" autocomplete="off" />
+                  <input v-model="musteri.sifre" type="password" maxlength="20" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Boş
                     olamaz.
@@ -168,6 +170,7 @@
                 <label class="col-sm-3 control-label">Doğum Tarihi</label>
                 <div class="col-sm-9">
                   <input
+                    v-model="musteri.dogumTarihi"
                     type="text"
                     maxlength="16"
                     class="date form-control"
@@ -236,7 +239,7 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label hidden-xs"></label>
                 <div class="col-sm-9">
-                  <button class="btn" type="button" ValidationGroup="NewUser">
+                  <button @click="addMusteri()" class="btn" type="button" ValidationGroup="NewUser">
                     KAYDOL
                     <i class="fa fa-check btnico"></i>
                   </button>
@@ -253,6 +256,7 @@
 
 
 <script>
+const API_URL ="http://localhost:3000/musteriler"
 import Header from "./Header";
 import Navbar from "./Navbar";
 import TopBanner from "./TopBanner";
@@ -269,6 +273,42 @@ export default {
     VueLoading
   },created() {
       document.title = "Giriş | Okuoku.com";
+  },
+  data: () => ({
+    error: "",
+    musteriler: [],
+    musteri: {
+      isim: "",
+      soyad: "",
+      email: "",
+      sifre:"",
+      dogumTarihi: ""
+    }
+  }),
+  methods: {
+    addMusteri() {
+      fetch(API_URL, {
+        method: "POST",
+        body: JSON.stringify(this.musteri),
+        headers: {
+          "content-type": "application/json"
+        }
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.details) {
+            // there was an error...
+            const error = result.details
+              .map(detail => detail.message)
+              .join(". ");
+            this.error = error;
+          } else {
+            this.error = "";
+            this.showMessageForm = false;
+            this.musteriler.push(result);
+          }
+        });
+    }
   }
 };
 </script>
