@@ -1,0 +1,12 @@
+{
+"musteriler": [
+    {
+      "id": 1,
+      "isim": "Gokhan",
+      "soyad": "Sisman",
+      "email": "gokhansisman97@gmail.com",
+      "sifre": "12345",
+      "dogumTarihi": "12-12-1912"
+    }
+]
+}

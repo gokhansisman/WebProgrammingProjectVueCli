@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const messages = require('./db/messages');
+const messages = require('./musteriler.json');
 const app = express();
 
 app.use(morgan('tiny'));
@@ -120,10 +120,9 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/messages', (req, res) => {
-    messages.getAll().then((messages) => {
+app.get('/musteriler', (req, res) => {
         res.json(messages);
-    });
+  
 });
 
 app.post('/messages', (req, res) => {
