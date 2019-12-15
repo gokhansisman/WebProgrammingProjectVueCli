@@ -71,15 +71,14 @@
                                 <div id="divList" class="row">
                                     <div class="col-sm-4">
                                         <a style="font-size: 17px;" class="section-title"
-                                            href="#">A Kariyer
-                                            Yayıncılık (2)</a></div>
+                                            href="#">{{yayinevleri[0].yayinevi1}} (2)</a></div>
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">A Kitap (38)</a></div>
+                                            href="#">{{yayinevleri[0].yayinevi2}} (38)</a></div>
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">A Yayınları (89)</a></div>
+                                            href="#">{{yayinevleri[0].yayinevi3}} (89)</a></div>
                                     
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">Academia Yayınevi
+                                            href="#">{{yayinevleri[0].yayinevi4}}
                                             (1)</a></div>
                                     
                                 </div>
@@ -117,6 +116,7 @@
 
 
 <script>
+const API_URL = "http://localhost:3000/yayinevleri"
 import Header from "./Header"
 import Navbar from "./Navbar"
 import TopBanner from "./TopBanner"
@@ -130,7 +130,18 @@ export default {
     TopBanner,
     FooterPage,
     VueLoading
-  },methods:{
+  },data:() =>({
+      hata:"",
+      yayinevleri:[]
+  }),
+  mounted(){
+      fetch(API_URL)
+      .then(response=>response.json())
+      .then(result=>{
+          this.yayinevleri =result;
+      });
+  }
+  ,methods:{
       tiklandi(){
           alert("Tiklandi");
       }

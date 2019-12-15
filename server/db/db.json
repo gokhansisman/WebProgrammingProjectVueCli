@@ -49,6 +49,28 @@
       "id": 6
     }
   ],
+  "yayinevleri": [
+    {
+      "id": 1,
+      "yayinevi": "A Kariyer Yayıncılık"
+    },
+    {
+      "id": 2,
+      "yayinevi": "A Kitap"
+    },
+    {
+      "id": 3,
+      "yayinevi": "Academia Yayınevi"
+    },
+    {
+      "id": 4,
+      "yayinevi": "A Yayınları"
+    },
+    {
+      "yayinevi": "Adem Yayınları",
+      "id": 5
+    }
+  ],
   "books": [
     {
       "kitap1Adi": "Issız Kadınlar Sokağı",
