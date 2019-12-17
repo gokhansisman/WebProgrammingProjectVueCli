@@ -24,7 +24,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-3 control-label">Şifre</label>
+                <label class="col-sm-3 control-label">{{musteriler[0].isim}}</label>
                 <div class="col-sm-9">
                   <input type="password" maxlength="20" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
@@ -141,7 +141,7 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-3 control-label">Şifre</label>
+                <label class="col-sm-3 control-label">{{musteriler[0].isim}}</label>
                 <div class="col-sm-9">
                   <input v-model="musteri.sifre" type="password" maxlength="20" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
@@ -256,7 +256,7 @@
 
 
 <script>
-const API_URL ="http://localhost:3000/musteriler"
+const API_URL ="http://192.168.1.38:8080/"
 import Header from "./Header";
 import Navbar from "./Navbar";
 import TopBanner from "./TopBanner";
@@ -271,8 +271,6 @@ export default {
     TopBanner,
     FooterPage,
     VueLoading
-  },created() {
-      document.title = "Giriş | Okuoku.com";
   },
   data: () => ({
     error: "",
@@ -284,7 +282,20 @@ export default {
       sifre:"",
       dogumTarihi: ""
     }
-  }),
+  }),created() {
+      fetch(API_URL)
+    .then(response=>response.json())
+    .then(result=>{
+      this.musteriler=result;
+    });
+  },
+  mounted(){
+    fetch(API_URL)
+    .then(response=>response.json())
+    .then(result=>{
+      this.musteriler=result;
+    });
+  },
   methods: {
     addMusteri() {
       fetch(API_URL, {
@@ -308,6 +319,13 @@ export default {
             this.musteriler.push(result);
           }
         });
+    },
+    veriyiCek(){
+       fetch(API_URL)
+    .then(response=>response.json())
+    .then(result=>{
+      this.musteriler=result;
+    });
     }
   }
 };

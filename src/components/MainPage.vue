@@ -1,16 +1,16 @@
 <template>
   <div>
     <FirstScreen/>
-    <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
+    <div style="position: inherit; z-index: 20; width: 100%; top: 0px;">
       <TopBanner/>
 
-      <Header />
+      <Header style="margin-bottom: -210px;margin-right: 173px;"/>
     </div>
 
     <Navbar />
 
     <div>
-      <div style="color:orchid; padding:50px; margin: 50px;">
+      <div style="color: orchid;padding-top: 90px;margin: 29px;">
         <div class="kapsul">
           <div id="sütun1" class="sütun1" style="width: 30%">
             <div class="w3-content w3-display-container" style="max-width:800px;">

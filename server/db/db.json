@@ -47,6 +47,22 @@
       "sifre": "1234",
       "dogumTarihi": "12/02/2022",
       "id": 6
+    },
+    {
+      "isim": "asdasd",
+      "soyad": "asdasd",
+      "email": "asdasd",
+      "sifre": "",
+      "dogumTarihi": "",
+      "id": 7
+    },
+    {
+      "isim": "Gokhan99",
+      "soyad": "h",
+      "email": "h",
+      "sifre": "7",
+      "dogumTarihi": "",
+      "id": 99
     }
   ],
   "yayinevleri": [
@@ -69,6 +85,10 @@
     {
       "yayinevi": "Adem Yayınları",
       "id": 5
+    },
+    {
+      "yayinevi": "Adem Yayınları",
+      "id": 6
     }
   ],
   "books": [

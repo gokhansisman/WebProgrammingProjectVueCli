@@ -125,15 +125,13 @@ app.get('/musteriler', (req, res) => {
   
 });
 
-app.post('/messages', (req, res) => {
-    console.log(req.body);
-    messages.create(req.body).then((message) => {
-        res.json(message);
+app.post('/musteriler', function(request, response){
+    console.log(request.body);      // your JSON
+    response.send(request.body);    // echo the result backs
     }).catch((error) => {
         res.status(500);
         res.json(error);
     });
-});
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {

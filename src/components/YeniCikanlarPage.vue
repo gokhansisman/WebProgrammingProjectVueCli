@@ -1,9 +1,9 @@
 <template>
   <div>
     <VueLoading />
-    <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
+    <div style="position: inherit; z-index: 20; width: 100%; top: 0px;">
       <TopBanner />
-      <Header />
+      <Header style="margin-bottom: -210px;margin-right: 173px;"/>
     </div>
     <Navbar />
     <div>
@@ -886,7 +886,5 @@ export default {
 .oneByone {
   -webkit-appearance: searchfield-cancel-button;
 }
-.fourGroups {
 
-}
 </style>
