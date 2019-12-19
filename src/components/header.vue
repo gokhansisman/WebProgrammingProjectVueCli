@@ -44,7 +44,16 @@
           </nav>
           <!-- sağ üst menü -->
           <!--class = nav pull right ile sağa veya aşağıdaki şekilde olabilir.-->
-          <div style="position: absolute;right:10%">
+          <div v-if="loading" style="position: absolute;right:10%">
+            <div>
+              <ul>
+                <li>
+                  Tekrar Hoşgeldiniz!
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div v-if="!loading" style="position: absolute;right:10%">
             <div>
               <ul>
                 <li>
@@ -63,6 +72,7 @@
             </div>
           </div>
         </div>
+        
         <div class="orta" style="margin-top: 15px;">
           <div class="logo col-md-3" style=" margin-top: 30px;">
             <a href="/" title="Okuoku.com">
@@ -114,7 +124,8 @@
               <a href="/#/PurchasePage" class="sepet" style="margin-top: 40px;">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="girisYapYazisi">SEPETİM</span>
-                <p>Giriş yapmalısınız.</p>
+                <div v-if="loading"><p>({{urunSayisi}}) adet ürün</p></div>
+                <p v-if="!loading">Giriş yapmalısınız.</p>
               </a>
             </div>
             <div>
@@ -131,9 +142,13 @@
                             "
                 href="/#/LoginPage"
               >
-                <i class="fa fa-user"></i>
-                <span class="girisYapYazisi">GİRİŞ YAP</span>
-                <p class="kayitol">KAYIT OL</p>
+                <i class="fa fa-user">
+
+                </i>
+                
+                <span v-if="loading" class="girisYapYazisi">{{isim}}</span>
+                <span v-if="!loading" class="girisYapYazisi">Giriş Yapınız</span>
+                <p v-if="loading" @click="cikisYap()" class="kayitol">Çıkış Yap</p>
               </a>
             </div>
           </div>
@@ -149,12 +164,30 @@ export default {
   components:{
     
   },
+  data(){
+    return {
+    loading:false,
+    kullanici:"gokhan",
+    isim: "",
+    urunSayisi:0
+     }
+   },
+  mounted(){
+  this.loading =  localStorage.getItem("loading");
+  this.kullanici = localStorage.getItem("kullanici");
+  this.isim = localStorage.getItem("kullanici");
+  },
   methods: {
     show() {
       this.$modal.show("hello-world");
     },
     hide() {
       this.$modal.hide("hello-world");
+    },
+    cikisYap(){
+      localStorage.setItem('loading',false);
+      localStorage.setItem('kullanici',null);
+      this.$router.push('/');
     }
   }
 };

@@ -37,13 +37,27 @@ app.get('/', (req, res) => {
 })
 */
 app.get('/', (req, res) => {
-    Musteriler.find({}).sort("soyad").exec(function(err, musteriler) {
-        if (err) return res.json({hata:"hatalı"})
+    Musteriler.find({}).sort("soyad").exec(function (err, musteriler) {
+        if (err) return res.json({ hata: "hatalı" })
         const fieldNames = Object.keys(MusterilerFieldNames)
-        res.json(musteriler);    
+        res.json(musteriler);
     })
 })
 
+app.post('/login', function (req, res) {
+    var ismi = req.body.ismi;
+    var sifre = req.body.sifre;
+
+    Musteriler.findOne({ ismi: ismi, sifre: sifre }, function (err, musteriler) {
+        if (err) {
+            return res.status(500).send();
+        }
+        if (!musteriler) {
+            return res.status(404).send();
+        }
+        return res.status(200).send(true);
+    })
+});
 
 app.post('/ekle', (req, res) => {
     const nMusteri = new Musteriler({
@@ -56,17 +70,17 @@ app.post('/ekle', (req, res) => {
 
     nMusteri.save((err) => {
         if (err) {
-            return res.json({err})
+            return res.json({ err })
         }
 
-        res.json({result: "Added"})
+        res.json({ result: "Added" })
         console.log('Added')
     })
-    
+
 })
 
 app.post('/save', (req, res) => {
-    res.json({asd:233333})
+    res.json({ asd: 233333 })
 })
 
 app.listen(8080, () => console.log('Started on 8080'))

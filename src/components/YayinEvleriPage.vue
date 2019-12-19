@@ -71,14 +71,14 @@
                                 <div id="divList" class="row">
                                     <div class="col-sm-4">
                                         <a style="font-size: 17px;" class="section-title"
-                                            href="#">{{yayinevleri[0].yayinevi1}} (2)</a></div>
+                                            href="#">{{yayinevleri[0].yayinevi}} (2)</a></div>
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">{{yayinevleri[0].yayinevi2}} (38)</a></div>
+                                            href="#">{{yayinevleri[1].yayinevi}} (38)</a></div>
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">{{yayinevleri[0].yayinevi3}} (89)</a></div>
+                                            href="#">{{yayinevleri[2].yayinevi}} (89)</a></div>
                                     
                                     <div class="col-sm-4"><a style="font-size: 17px;" class="section-title"
-                                            href="#">{{yayinevleri[0].yayinevi4}}
+                                            href="#">{{yayinevleri[3].yayinevi}}
                                             (1)</a></div>
                                     
                                 </div>

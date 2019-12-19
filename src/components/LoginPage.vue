@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VueLoading/>
+    <VueLoading />
     <div style="position: fixed; z-index: 20; width: 100%; top: 0px;">
       <TopBanner />
       <Header />
@@ -15,7 +15,7 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label">Eposta</label>
                 <div class="col-sm-9">
-                  <input type="text" maxlength="100" class="form-control" autocomplete="off" />
+                  <input v-model="musteriLogin.ismi" type="text" maxlength="100" class="form-control" autocomplete="off" />
 
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Boş
@@ -24,9 +24,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-3 control-label">{{musteriler[0].isim}}</label>
+                <label class="col-sm-3 control-label">{{musteriler[0].email}}</label>
                 <div class="col-sm-9">
-                  <input type="password" maxlength="20" class="form-control" autocomplete="off" />
+                  <input type="password" v-model="musteriLogin.sifre" maxlength="20" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Boş
                     olamaz.
@@ -46,7 +46,7 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label hidden-xs"></label>
                 <div class="col-sm-9">
-                  <button class="btn" type="button" ValidationGroup="Login">
+                  <button @click="loginOl()" class="btn" type="button" ValidationGroup="Login">
                     GİRİŞ
                     <i class="fa fa-check btnico"></i>
                   </button>
@@ -56,7 +56,7 @@
                 <label class="col-sm-3 control-label hidden-xs"></label>
                 <div class="col-sm-9">
                   <button class="btn face" type="button">
-                    FACEBOOK İLE GİRİŞ
+                    FACEBOOK İLE GİRİŞ{{basarilimi}}
                     <i class="fa fa-facebook-f btnico"></i>
                   </button>
                 </div>
@@ -96,7 +96,7 @@
                 <label class="col-sm-3 control-label">Ad</label>
                 <div class="col-sm-9">
                   <input
-                  v-model="musteri.isim"
+                    v-model="musteri.ismi"
                     type="text"
                     maxlength="50"
                     class="firsCapitalUpper form-control"
@@ -112,7 +112,7 @@
                 <label class="col-sm-3 control-label">Soyad</label>
                 <div class="col-sm-9">
                   <input
-                  v-model="musteri.soyad"
+                    v-model="musteri.soyad"
                     type="text"
                     maxlength="50"
                     class="firsCapitalUpper form-control"
@@ -128,7 +128,13 @@
               <div class="form-group">
                 <label class="col-sm-3 control-label">Eposta</label>
                 <div class="col-sm-9">
-                  <input v-model="musteri.email" type="text" maxlength="100" class="form-control" autocomplete="off" />
+                  <input
+                    v-model="musteri.email"
+                    type="text"
+                    maxlength="100"
+                    class="form-control"
+                    autocomplete="off"
+                  />
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Eposta formatı
                     uygun değil.
@@ -141,9 +147,15 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-3 control-label">{{musteriler[0].isim}}</label>
+                <label class="col-sm-3 control-label">{{musteriler[0].soyad}}</label>
                 <div class="col-sm-9">
-                  <input v-model="musteri.sifre" type="password" maxlength="20" class="form-control" autocomplete="off" />
+                  <input
+                    v-model="musteri.sifre"
+                    type="password"
+                    maxlength="20"
+                    class="form-control"
+                    autocomplete="off"
+                  />
                   <span style="color:#DD2331;font-size:Small;display:none;">
                     <span></span>Boş
                     olamaz.
@@ -256,13 +268,13 @@
 
 
 <script>
-const API_URL ="http://192.168.1.38:8080/"
+const API_URL = "http://localhost:8080";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import TopBanner from "./TopBanner";
 //import FirstScreen from "./FirstScreen";
 import FooterPage from "./FooterPage";
-import VueLoading from "./VueLoading"
+import VueLoading from "./VueLoading";
 export default {
   name: "LoginPage",
   components: {
@@ -275,30 +287,37 @@ export default {
   data: () => ({
     error: "",
     musteriler: [],
+    basarilimi:false,
     musteri: {
       isim: "",
       soyad: "",
       email: "",
-      sifre:"",
+      sifre: "",
       dogumTarihi: ""
-    }
-  }),created() {
-      fetch(API_URL)
-    .then(response=>response.json())
-    .then(result=>{
-      this.musteriler=result;
-    });
-  },
-  mounted(){
+    },
+    musteriLogin: {
+      ismi: "",
+      sifre: ""
+    },
+    data:""
+  }),
+  created() {
     fetch(API_URL)
-    .then(response=>response.json())
-    .then(result=>{
-      this.musteriler=result;
-    });
+      .then(response => response.json())
+      .then(result => {
+        this.musteriler = result;
+      });
+  },
+  mounted() {
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(result => {
+        this.musteriler = result;
+      });
   },
   methods: {
     addMusteri() {
-      fetch(API_URL, {
+      fetch(`http://localhost:8080/ekle`, {
         method: "POST",
         body: JSON.stringify(this.musteri),
         headers: {
@@ -313,19 +332,47 @@ export default {
               .map(detail => detail.message)
               .join(". ");
             this.error = error;
+            this.basarilimi=false;
           } else {
+            //this.basarilimi=!this.basarilimi;
             this.error = "";
             this.showMessageForm = false;
+            alert('Gokhan');
             this.musteriler.push(result);
           }
         });
     },
-    veriyiCek(){
-       fetch(API_URL)
-    .then(response=>response.json())
-    .then(result=>{
-      this.musteriler=result;
-    });
+    loginOl() {
+      fetch('http://localhost:8080/login', {
+        method: "POST",
+        body: JSON.stringify(this.musteriLogin),
+        headers: {
+          "content-type": "application/json;odata=verbose"
+        }
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.details) {
+            // there was an error...
+            const error = result.details
+              .map(detail => detail.message)
+              .join(". ");
+            this.error = error;
+            
+            alert("gokhan");
+          } else {
+            //this.basarilimi=!this.basarilimi;
+            this.error = "";
+            this.showMessageForm = false;
+            alert('Gokhan');
+            this.basarilimi=true;
+            localStorage.setItem("kullanici",this.musteriLogin.ismi);
+            localStorage.setItem("loading",true);
+            //this.$router.push('/');
+            window.history.back();
+            //this.musteriler.push(result);
+          }
+        });
     }
   }
 };
