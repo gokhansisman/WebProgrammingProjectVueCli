@@ -286,11 +286,11 @@
                         <a class>Kargo Ödeyenler</a>
                       </li>
                     </ul>
-                    <div class="tab-content">
+                    <div class="tab-content ">
                       <div role="tabpanel" class="tab-pane active clearfix">
                         <div class="govdeKitap">
                           <div class="kitaplar">
-                            <div style="border-top: 1px solid rgb(246, 246, 246); margin-top: 1px;">
+                            <div class="deneme" style="border-top: 1px solid rgb(246, 246, 246); margin-top: 1px;">
                               <div>
                                 <div class="kitapCerceve clearfix">
                                   <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
@@ -1155,5 +1155,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.deneme:hover{
+  color: red;
+}
 </style>

@@ -176,7 +176,7 @@
                     <p>
                       <span id="spnShippingInformation" class="adt">Kargo Ücretsiz</span>
                     </p>
-                    <a id="lnkAddOrder" href="#" onclick="CheckCampaign();" class="btn">
+                    <a id="lnkAddOrder" href="#" @click="buy()" class="btn">
                       SATIN AL
                       <i class="fa fa-check btnico"></i>
                     </a>
@@ -189,6 +189,7 @@
 
         <md-step id="third" md-label="Ödeme İşlemi"></md-step>
         <p>Burada ödeme işlemi gerçekleşir</p>
+        <p >ÖDE</p>
       </md-steppers>
       <FooterPage />
     </div>
@@ -214,7 +215,12 @@ export default {
   },data(){   
      return {
       count:0,
-      visible:true
+      visible:true,
+      urun: {
+      urunAdi: "",
+      adet: "",
+      musteri: ""
+    }
      }
   },
   methods:{
@@ -224,9 +230,41 @@ export default {
 
     },
     getProductInfo(){
-      this.count = localStorage.getItem('Urun Sayisi')
+      this.count = localStorage.getItem('Urun Sayisi');
+      this.urun.adet = localStorage.getItem('Urun Sayisi');
+      this.urun.urunAdi = localStorage.getItem('urunAdi');
+      this.urun.musteri = localStorage.getItem('kullanici');
+    },
+    buy(){
+    {
+      fetch(`http://localhost:8080/urunlerEkle`, {
+        method: "POST",
+        body: JSON.stringify(this.urun),
+        headers: {
+          "content-type": "application/json"
+        }
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.details) {
+            // there was an error...
+            const error = result.details
+              .map(detail => detail.message)
+              .join(". ");
+            this.error = error;
+            this.basarilimi=false;
+          } else {
+            //this.basarilimi=!this.basarilimi;
+            this.error = "";
+            this.showMessageForm = false;
+            alert('Gokhan');
+            //this.urunler.push(result);
+          }
+        });
+    }
     }
   },
+
     created() {
     document.title = "Satın Al | Okuoku.com";
   }

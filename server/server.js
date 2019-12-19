@@ -6,6 +6,9 @@ const db = require('./db/index.js')
 const Musteriler = require('./model/musteriler.js')
 const MusterilerFieldNames = require('./model/musteriler.js').fieldNames
 
+const Urunler = require('./model/urunler')
+const UrunlerFieldNames = require('./model/urunler').fieldNames
+
 app.set('json spaces', 3)
 app.set('view engine', 'ejs')
 
@@ -42,6 +45,32 @@ app.get('/', (req, res) => {
         const fieldNames = Object.keys(MusterilerFieldNames)
         res.json(musteriler);
     })
+})
+
+app.get('/urunler', (req, res) => {
+    Urunler.find({}).sort("urunAdi").exec(function (err, urunler) {
+        if (err) return res.json({ hata: "hatalı" })
+        const fieldNames = Object.keys(UrunlerFieldNames)
+        res.json(urunler);
+    })
+})
+app.post('/urunlerEkle', (req, res) => {
+    const nUrun = new Urunler({
+        urunAdi: req.body.urunAdi,
+        adet: req.body.adet,
+        musteri: req.body.musteri,
+        
+    })
+
+    nUrun.save((err) => {
+        if (err) {
+            return res.json({ err })
+        }
+
+        res.json({ result: "Added" })
+        console.log('Added')
+    })
+
 })
 
 app.post('/login', function (req, res) {

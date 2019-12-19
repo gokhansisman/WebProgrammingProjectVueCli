@@ -271,6 +271,7 @@ export default {
     ekle() {
       (this.message = "SEPETE EKLENDI"), (this.tiklandiMi = true);
       localStorage.setItem("Urun Sayisi", this.counter);
+      localStorage.setItem("urunAdi", "Issız Kadınlar Sokağı");
     }
   },
   created() {
