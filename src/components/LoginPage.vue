@@ -24,7 +24,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-3 control-label">{{musteriler[0].email}}</label>
+                <label class="col-sm-3 control-label">Sifre</label>
                 <div class="col-sm-9">
                   <input type="password" v-model="musteriLogin.sifre" maxlength="20" class="form-control" autocomplete="off" />
                   <span style="color:#DD2331;font-size:Small;display:none;">
@@ -147,7 +147,7 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-3 control-label">{{musteriler[0].soyad}}</label>
+                <label class="col-sm-3 control-label">Şifre</label>
                 <div class="col-sm-9">
                   <input
                     v-model="musteri.sifre"
@@ -361,7 +361,6 @@ export default {
             
             alert("gokhan");
           } else {
-            //this.basarilimi=!this.basarilimi;
             this.error = "";
             this.showMessageForm = false;
             alert('Gokhan');
@@ -370,7 +369,6 @@ export default {
             localStorage.setItem("loading",true);
             //this.$router.push('/');
             window.history.back();
-            //this.musteriler.push(result);
           }
         });
     }
