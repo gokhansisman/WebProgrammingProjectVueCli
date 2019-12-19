@@ -1,8 +1,8 @@
 <template>
     <div class="clearfix">
     <!--footerın Üstü-->
-    <div class="fa fa-plus-square-o" @click="toggle()" style="float: right;
-    font-size: 16px;
+    <div class="fa fa-plus-square" @click="toggle()" style="float: right;
+    font-size: 24px;
     color: orange;">Footer Aç/Kapat</div>
     <div style="margin-top: 20px;
                             background-color: #ececec;
