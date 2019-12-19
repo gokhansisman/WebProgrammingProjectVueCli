@@ -44,19 +44,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{books[0].kitap1Adi}}</h5>
+                                  >{{books[0].kitapAdi}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{books[0].kitap1Yazar}}</span>
+                                      <span>{{books[0].kitapYazar}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{books[0].kitap1YayinEvi}}</span>
+                                      <span>{{books[0].kitapYayinevi}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -109,12 +109,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{books[0].kitap1Yuzde}}
+                                  %{{books[0].kitapYuzde}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat">{{books[0].kitap1Fiyat}}</span>
-                                  <span class="yeniFiyat">{{books[0].kitap1IndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat">{{books[0].kitapFiyat}}</span>
+                                  <span class="yeniFiyat">{{books[0].kitapIndirimliFiyat}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -157,14 +157,14 @@
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{books[0].kitap2Yazar}}</span>
+                                      <span>{{books[1].kitapYazar}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{books[0].kitap2YayinEvi}}</span>
+                                      <span>{{books[1].kitapYayinevi}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -217,12 +217,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{books[0].kitap2Yuzde}}
+                                  %{{books[1].kitapYuzde}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat">{{books[0].kitap2Fiyat}}</span>
-                                  <span class="yeniFiyat">{{books[0].kitap2IndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat">{{books[1].kitapFiyat}}</span>
+                                  <span class="yeniFiyat">{{books[1].kitapIndirimliFiyat}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -260,19 +260,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{books[0].kitap3Adi}}</h5>
+                                  >{{books[2].kitapAdi}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{books[0].kitap3Yazar}}</span>
+                                      <span>{{books[2].kitapYazar}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{books[0].kitap3YayinEvi}}</span>
+                                      <span>{{books[2].kitapYayinevi}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -325,12 +325,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{books[0].kitap3Yuzde}}
+                                  %{{books[2].kitapYuzde}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat">{{books[0].kitap3Fiyat}}</span>
-                                  <span class="yeniFiyat">{{books[0].kitap3IndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat">{{books[2].kitapFiyat}}</span>
+                                  <span class="yeniFiyat">{{books[2].kitapIndirimliFiyat}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -368,19 +368,19 @@
                                     text-decoration: none !important;
                                     padding-left: 3px;
                                     padding-right: 3px;"
-                                  >{{books[0].kitap30Adi}}</h5>
+                                  >{{books[3].kitapAdi}}</h5>
                                 </a>
                                 <h6 style=" height: 13px; font-size: 10px; margin-top: 5px;">
                                   <span>
                                     <a href="#zeynep-sahra">
-                                      <span>{{books[0].kitap30Yazar}}</span>
+                                      <span>{{books[3].kitapYazar}}</span>
                                     </a>
                                   </span>
                                 </h6>
                                 <h6 style="height: 13px; font-size: 10px; margin-top: 5px; ">
                                   <span>
                                     <a href="#ren-kitap">
-                                      <span>{{books[0].kitap30YayinEvi}}</span>
+                                      <span>{{books[3].kitapYayinevi}}</span>
                                     </a>
                                   </span>
                                 </h6>
@@ -433,12 +433,12 @@
                                   </div>
                                 </div>
                                 <span class="yuzde">
-                                  %{{books[0].kitap30Yuzde}}
+                                  %{{books[3].kitapYuzde}}
                                   <span>indirim</span>
                                 </span>
                                 <div class="top-eksi">
-                                  <span class="eski-fiyat" style="top:-10px">{{books[0].kitap30Fiyat}}</span>
-                                  <span class="yeniFiyat">{{books[0].kitap30IndirimliFiyat}}TL</span>
+                                  <span class="eski-fiyat" style="top:-10px">{{books[3].kitapFiyat}}</span>
+                                  <span class="yeniFiyat">{{books[3].kitapIndirimliFiyat}}TL</span>
                                 </div>
                               </div>
                             </div>
@@ -459,7 +459,16 @@
 
 
 <script>
-const API_URL ="http://localhost:3000/books"
+let API_URL =""
+if(localStorage.getItem("filtre")==="yazar"){
+API_URL ="http://localhost:8080/kitap"
+alert("gokhan")
+}
+else if(localStorage.getItem("filtre")==="fiyat"){
+API_URL ="http://localhost:8080/fiyat" 
+alert("gokhan22")
+}
+
 export default {
   name: "Book",
   components: {},

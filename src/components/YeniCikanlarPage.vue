@@ -194,12 +194,13 @@
                         style="float: left; width: 200px; height: 25px; padding-left: 3px; margin-left: -2px; overflow: hidden;"
                       >
                         <input
+                          
                           type="checkbox"
                           class="regular-checkbox chcEmployees1"
                           id="checkboxEmployee1-81396"
                         />
                         <label for="checkboxEmployee1-81396"></label>
-                        <label for="checkboxEmployee1-81396">Beşir Ayvazoğlu</label>
+                        <label for="checkboxEmployee1-81396">Zeynep Sahr</label>
                       </div>
                       <div style="float: right; margin-right: 5px; margin-top: 7px">
                         <span class>(2)</span>
@@ -785,13 +786,15 @@
                   <div class="col-md-6">
                     <select id="slcOrderBy" class="form-control">
                       <option value="P.SaleQuantity DESC">Çok Satandan Az Satana</option>
-                      <option selected="selected" value="ProductId Desc">Yeniden Eskiye</option>
-                      <option value="ProductId ASC">Eskiden yeniye</option>
+                      <option  value="ProductId Desc">Yeniden Eskiye</option>
+                      <option @click="filtrele()" selected="selected" >Yazar İsmine Göre</option>
                       <option value="P.Name ASC">İsme göre artan (A-&gt;Z)</option>
                       <option value="P.Name DESC">İsme göre azalan (Z-&gt;A)</option>
-                      <option value="P.SalePrice DESC">Fiyata göre azalan</option>
-                      <option value="P.SalePrice ASC">Fiyata göre artan</option>
+                      <option  value="P.SalePrice DESC">Fiyata göre azalan</option>
+                      
+                      <option  value="P.SalePrice ASC">Fiyata göre artan</option>
                     </select>
+                    <button @click="filtreleFiyat()">Fiyata göre filtrele</button>
                   </div>
                   <div class="col-md-6 sonucsayi sifirla hidden-sm hidden-xs">
                     <v-pagination
@@ -874,6 +877,12 @@ export default {
   methods: {
     changeShape(){
       this.shape=!this.shape
+    },
+    filtrele(){
+      localStorage.setItem("filtre","yazar");
+    },
+    filtreleFiyat(){
+       localStorage.setItem("filtre","fiyat");
     }
   },
   created() {

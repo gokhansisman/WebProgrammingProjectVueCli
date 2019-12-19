@@ -9,6 +9,9 @@ const MusterilerFieldNames = require('./model/musteriler.js').fieldNames
 const Urunler = require('./model/urunler')
 const UrunlerFieldNames = require('./model/urunler').fieldNames
 
+const Kitaplar = require('./model/kitaplar')
+const KitaplarFieldNames = require('./model/kitaplar').fieldNames
+
 app.set('json spaces', 3)
 app.set('view engine', 'ejs')
 
@@ -72,6 +75,53 @@ app.post('/urunlerEkle', (req, res) => {
     })
 
 })
+
+app.get('/kitap', (req, res) => {
+    Kitaplar.find({}).sort("kitapYazar").exec(function (err, kitap) {
+        if (err) return res.json({ hata: "hatalı" })
+        const fieldNames = Object.keys(KitaplarFieldNames)
+        res.json(kitap);
+    })
+})
+app.get('/fiyat', (req, res) => {
+    Kitaplar.find({}).sort("kitapFiyat").exec(function (err, kitap) {
+        if (err) return res.json({ hata: "hatalı" })
+        const fieldNames = Object.keys(KitaplarFieldNames)
+        res.json(kitap);
+    })
+})
+
+app.post('/kitapAdd', (req, res) => {
+    const nKitap = new Kitaplar({
+        kitapAdi: req.body.kitapAdi,
+        kitapYazar: req.body.kitapYazar,
+        kitapYayinevi: req.body.kitapYayinevi,
+        kitapYuzde: req.body.kitapYuzde,
+        kitapFiyat: req.body.kitapFiyat,
+        kitapIndirimliFiyat: req.body.kitapIndirimliFiyat
+        
+    })
+
+    nKitap.save((err) => {
+        if (err) {
+            return res.json({ err })
+        }
+
+        res.json({ result: "Added" })
+        console.log('Added')
+    })
+
+})
+
+app.get('/filtre', function (req, res) {
+
+    Kitaplar.findOne({kitapYazar: 'Zeynep Sahr'}).exec(function (err, kitap) {
+        if (err) return res.json({ hata: "hatalı" })
+        const fieldNames = Object.keys(KitaplarFieldNames)
+        res.json(kitap);
+    })
+});
+
 
 app.post('/login', function (req, res) {
     var ismi = req.body.ismi;
