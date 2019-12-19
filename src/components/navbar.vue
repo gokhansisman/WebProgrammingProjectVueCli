@@ -35,7 +35,7 @@
                 <a href="/#/YayinEvleri">Yayınevleri</a>
                 <a href="#yayinevi/listele" class="dropdown-child" style="color:goldenrod">Acedemia</a>
                 <a
-                  href="#yayinevi/listele"
+                  href="/#/YayinEvleri"
                   class="dropdown-child"
                   style="color:goldenrod"
                 >Adım Kitap</a>
@@ -75,7 +75,7 @@
                 </a>
               </li>
               <li style=" text-transform: uppercase;">
-                <a href="#kampanyali-yayinevleri">
+                <a href="/#/CocukPage">
                   <i class="fa fa-paper-plane-o" style="color: #3598DC;"></i>
                   <strong style="color: #3598DC;">
                     &nbsp;

@@ -176,6 +176,7 @@ export default {
   this.loading =  localStorage.getItem("loading");
   this.kullanici = localStorage.getItem("kullanici");
   this.isim = localStorage.getItem("kullanici");
+  this.urunSayisi = localStorage.getItem("Urun Sayisi");
   },
   methods: {
     show() {
