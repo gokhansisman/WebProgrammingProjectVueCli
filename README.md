@@ -1,5 +1,6 @@
 # okuoku
-This project was made for the web programming course project in my university.
+> This project was made for the web programming course project in my university.
+**You can find only the HTML and CSS version of this project in the my other repository.**
 ## Project setup
 ```
 npm install
