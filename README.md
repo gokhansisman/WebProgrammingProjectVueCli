@@ -1,5 +1,5 @@
 # okuoku
-
+This project was made for the web programming course project in my university.
 ## Project setup
 ```
 npm install
